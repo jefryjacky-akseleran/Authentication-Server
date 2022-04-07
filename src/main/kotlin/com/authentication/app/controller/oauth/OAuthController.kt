@@ -58,6 +58,12 @@ class OAuthController {
         return TokenResponse(tokenData.accessToken, tokenData.refreshToken, tokenData.expiredTime)
     }
 
+    @PostMapping("/logout")
+    @ResponseStatus(HttpStatus.OK)
+    fun logout(@RequestHeader("Authorization") token: String){
+
+    }
+
     companion object{
         private const val EMAIL_PARAM = "email"
         private const val PASSWORD_PARAM = "password"

@@ -1,5 +1,6 @@
 package com.authentication.app.controller.oauth.model
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.annotation.JsonProperty
 import java.awt.Stroke
 
@@ -10,6 +11,7 @@ data class TokenResponse(
         @JsonProperty("access_token")
         val accessToken: String,
         @JsonProperty("refresh_token")
+        @JsonIgnore
         val refreshToken: String,
         @JsonProperty("expired_date")
         val expiredDate: Long
